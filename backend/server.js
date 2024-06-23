@@ -11,11 +11,13 @@ import userRoutes from "./routes/userRoute.js";
 import connectToMongodb from "./db/conn.js";
 import { app, server } from "./socket/socket.js";
 
-const port =  process.env.PORT || 5000;
+
+dotenv.config();
 
 const __dirname = path.resolve();
 
-dotenv.config();
+
+const port =  process.env.PORT || 5000;
 
 app.use(cookieParser());
 app.use(express.json());
