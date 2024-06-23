@@ -17,7 +17,7 @@ dotenv.config();
 const __dirname = path.resolve();
 
 
-const port =  process.env.PORT || 5000;
+const PORT =  process.env.PORT || 5000;
 
 app.use(cookieParser());
 app.use(express.json());
@@ -36,7 +36,7 @@ app.get("*",(req,res) => {
 
 
 
-server.listen(port, ()=>{
+server.listen(PORT, ()=>{
     connectToMongodb();
-    console.log(`Connected to the port ${port}`);
+    console.log(`Connected to the port ${PORT}`);
 })
